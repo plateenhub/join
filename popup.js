@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         text:  'Do you accept our policy before exploring our content?',
         yes:   'Yes, Accept',
         no:    'Close',
-        redirectOnClose:  '/',                                        // no redirect on close (index)
-        redirectOnAccept: '/'             // redirect on accept (index)
+        redirectOnClose:  '',                                        // no redirect on close (index)
+        redirectOnAccept: ''             // redirect on accept (index)
       };
 
   // Build modal (namespaced classes to avoid Bootstrap conflicts)
@@ -84,4 +84,5 @@ document.addEventListener('DOMContentLoaded', () => {
   bd.addEventListener('click', (e) => { if (e.target === bd) handleClose(); });
   window.addEventListener('keydown', (e) => { if (e.key === 'Escape') handleClose(); });
 });
+
 
