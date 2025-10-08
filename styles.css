@@ -1,0 +1,58 @@
+/* Theme (shortened to essentials) */
+body {
+  font-family: system-ui, Arial, sans-serif;
+  background: radial-gradient(1000px 400px at 50% -10%, #15223a 0%, #0b1220 55%);
+  color: #eaf4ff;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Header */
+.site-header { background:#0d1526cc; backdrop-filter:blur(6px); border-bottom:1px solid #1b2741; position:sticky; top:0; z-index:10; }
+.nav a { color:#eaf4ff; text-decoration:none; margin:0 10px; }
+.btn { background:linear-gradient(135deg,#4dd0ff,#7ee6ff); color:#001428; border:none; padding:10px 16px; border-radius:12px; cursor:pointer; }
+
+/* Footer */
+.site-footer { background:#0d1526cc; color:#eaf4ff; }
+
+/* ===========================
+   Namespaced popup (no conflict)
+   =========================== */
+.ttf-backdrop{
+  position:fixed; inset:0;
+  display:none; align-items:center; justify-content:center;
+  background:rgba(0,0,0,.75);
+  backdrop-filter: blur(6px);
+  z-index:12000;
+  opacity:0; transition: opacity .28s ease;
+}
+.ttf-backdrop.active{ display:flex; opacity:1; }
+
+.ttf-modal{
+  position:relative;
+  width:min(520px, 92vw);
+  padding:28px 24px;
+  background: linear-gradient(145deg, #0b0f1a, #111a2d);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:20px;
+  box-shadow: 0 0 25px rgba(0,255,224,.25), 0 0 45px rgba(255,41,168,.15);
+  color:#eaf4ff;
+  transform: scale(.96); opacity:0;
+  transition: transform .28s ease, opacity .28s ease;
+}
+.ttf-modal.show{ transform: scale(1); opacity:1; }
+
+.ttf-modal .close-btn{
+  position:absolute; right:12px; top:10px;
+  font-size:22px; line-height:1; cursor:pointer;
+  background:transparent; border:0; color:#4dd0ff;
+}
+.ttf-modal .close-btn:hover{ color:#ff29a8; }
+
+.ttf-modal .btn{
+  padding:10px 14px; border-radius:10px; cursor:pointer;
+  border:1px solid rgba(255,255,255,.15);
+  background:#0f2030; color:#eaf4ff;
+}
+.ttf-modal .btn.ghost{ background:transparent; }
+body.ttf-modal-open{ overflow:hidden; }

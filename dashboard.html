@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard — Cambalaches</title>
+  <meta name="description" content="Manage products and orders." />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="Images/cambalaches_logo.png" alt="Cambalaches" class="brand-logo">
+      <span class="brand-name">Cambalaches</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="dashboard.html" id="nav-dashboard">Dashboard</a>
+      <a href="login.html" id="nav-login">Login</a>
+      <a href="register.html" id="nav-register">Register</a>
+      <button class="btn small" id="nav-logout" style="display:none;">Logout</button>
+      <a href="cart.html" class="cart-link" id="nav-cart">🛒 <span id="cart-count">0</span></a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+
+<h2>Dashboard</h2>
+<p class="muted">Demo admin: add/edit/delete products (saved to localStorage on this device).</p>
+<div class="actions">
+  <a href="newProduct.html" class="btn">+ New Product</a>
+</div>
+<table class="table" id="admin-table">
+  <thead><tr><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Actions</th></tr></thead>
+  <tbody></tbody>
+</table>
+<script defer src="products.js"></script>
+<script defer src="editProduct.js"></script>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Cambalaches. All rights reserved.</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

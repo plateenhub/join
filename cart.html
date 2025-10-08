@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Cart — Cambalaches</title>
+  <meta name="description" content="Shopping cart." />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="Images/cambalaches_logo.png" alt="Cambalaches" class="brand-logo">
+      <span class="brand-name">Cambalaches</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="dashboard.html" id="nav-dashboard">Dashboard</a>
+      <a href="login.html" id="nav-login">Login</a>
+      <a href="register.html" id="nav-register">Register</a>
+      <button class="btn small" id="nav-logout" style="display:none;">Logout</button>
+      <a href="cart.html" class="cart-link" id="nav-cart">🛒 <span id="cart-count">0</span></a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+
+<h2>Your Cart</h2>
+<div id="cart-items" class="cards"></div>
+<div class="cart-summary">
+  <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+  <button class="btn" id="checkout-btn">Proceed to Checkout</button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const items = JSON.parse(localStorage.getItem('cart')||'[]');
+  const grid = document.getElementById('cart-items');
+  const totalEl = document.getElementById('cart-total');
+  let total = 0;
+  if (!items.length) {
+    grid.innerHTML = '<p>Your cart is empty.</p>';
+  } else {
+    grid.innerHTML = items.map(it => {
+      total += it.price * it.qty;
+      return `<div class="card"><h4>${it.name}</h4>
+              <p>Qty: ${it.qty}</p>
+              <p>$${it.price.toFixed(2)}</p></div>`;
+    }).join('');
+  }
+  totalEl.textContent = total.toFixed(2);
+  document.getElementById('checkout-btn').addEventListener('click', () => {
+    alert('This is a demo checkout. Add your payment gateway here.');
+  });
+});
+</script>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Cambalaches. All rights reserved.</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

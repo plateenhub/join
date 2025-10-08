@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cambalaches — Home</title>
+  <meta name="description" content="Cambalaches online shop: electronics, kitchen and sports deals." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container header-inner d-flex justify-content-between align-items-center py-3">
+    <a class="brand d-flex align-items-center" href="index.html">
+      <img src="Images/cambalaches_logo.png" alt="Cambalaches" class="brand-logo mr-2" style="height:50px;cursor:pointer;">
+      <span class="brand-name h4 mb-0 text-light" style="cursor:pointer;">Cambalaches</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="dashboard.html" id="nav-dashboard" class="nav-link">Dashboard</a>
+      <a href="login.html" id="nav-login" class="nav-link">Login</a>
+      <a href="register.html" id="nav-register" class="nav-link">Register</a>
+      <button class="btn btn-sm btn-danger" id="nav-logout" style="display:none;">Logout</button>
+      <a href="cart.html" class="cart-link btn btn-light" id="nav-cart">🛒 <span id="cart-count">0</span></a>
+    </nav>
+  </div>
+</header>
+
+<main class="container my-5">
+
+  <section class="hero text-center mb-5">
+    <h1>Find great deals on Electronics, Kitchen & Sports</h1>
+    <p>Your friendly store with hand-picked items and fast shipping.</p>
+    <div class="hero-cta mt-3">
+      <a href="products.html" class="btn btn-primary">Browse Products</a>
+      <a href="cambalaches.html" class="btn btn-outline-primary">About Us</a>
+    </div>
+  </section>
+
+  <section class="grid-3 d-flex flex-wrap justify-content-between text-center">
+    <article class="card mb-4" style="width:30%;">
+      <img src="https://template.canva.com/EAFPo_6ymzA/2/0/1600w-YDdi-5wWgDg.jpg" class="card-img-top" alt="Electronics">
+      <div class="card-body">
+        <h3>Latest Electronics</h3>
+        <p>Headphones, smartwatches, portable speakers and more.</p>
+        <a class="link" href="products.html?cat=Electronics">Shop electronics →</a>
+      </div>
+    </article>
+
+    <article class="card mb-4" style="width:30%;">
+      <img src="https://template.canva.com/EAE3OW0oHmA/2/0/1600w-c77DAh5uopw.jpg" class="card-img-top" alt="Kitchen">
+      <div class="card-body">
+        <h3>Kitchen Essentials</h3>
+        <p>Cookware, mixers, blenders and must-have accessories.</p>
+        <a class="link" href="products.html?cat=Kitchen">Shop kitchen →</a>
+      </div>
+    </article>
+
+    <article class="card mb-4" style="width:30%;">
+      <img src="https://template.canva.com/EAGMPTe5s-o/2/0/1600w-eqcw4JcIVBI.jpg" class="card-img-top" alt="Sports">
+      <div class="card-body">
+        <h3>Sports & Fitness</h3>
+        <p>From yoga mats to footballs — gear up and move.</p>
+        <a class="link" href="products.html?cat=Sports">Shop sports →</a>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <h2 class="section-title text-center mb-4">Featured Products</h2>
+    <div class="cards d-flex flex-wrap justify-content-around" id="featured-grid"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer bg-light py-3 mt-5">
+  <div class="container text-center">
+    <p>© <span id="year"></span> Cambalaches. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS & deps (optional for your layout, not used by popup) -->
+<script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<!-- Your scripts (deferred to ensure DOM exists first) -->
+<script defer src="app.js"></script>
+<script defer src="popup.js"></script>
+</body>
+</html>

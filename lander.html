@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cambalaches — Lander</title>
+  <meta name="description" content="Cambalaches landing page with responsive background images." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: url("Paste img link here") no-repeat center center / cover;
+    }
+    @media (max-width: 600px) {
+      body { background-image: url("Paste img link here"); }
+    }
+    @media (min-width: 601px) and (max-width: 1024px) {
+      body { background-image: url("Paste img link here"); }
+    }
+    @media (min-width: 1025px) {
+      body { background-image: url("Paste img link here"); }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container text-center py-5">
+    <h1>Welcome to Cambalaches</h1>
+    <p>Explore great deals across electronics, kitchen, and sports.</p>
+    <a href="index.html" class="btn btn-primary">Go to Home</a>
+  </main>
+
+  <footer class="site-footer bg-light py-3">
+    <div class="container text-center">
+      <p>© <span id="year"></span> Cambalaches. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script defer src="popup.js"></script>
+</body>
+</html>

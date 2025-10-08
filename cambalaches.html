@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Cambalaches</title>
+  <meta name="description" content="About Cambalaches store." />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="Images/cambalaches_logo.png" alt="Cambalaches" class="brand-logo">
+      <span class="brand-name">Cambalaches</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="dashboard.html" id="nav-dashboard">Dashboard</a>
+      <a href="login.html" id="nav-login">Login</a>
+      <a href="register.html" id="nav-register">Register</a>
+      <button class="btn small" id="nav-logout" style="display:none;">Logout</button>
+      <a href="cart.html" class="cart-link" id="nav-cart">🛒 <span id="cart-count">0</span></a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+
+<h2>About Cambalaches</h2>
+<p>We started Cambalaches with a simple idea: make online shopping friendly and transparent.
+Curated products, clear pricing, and no-nonsense support.</p>
+
+<div class="grid-3">
+  <article class="card">
+    <h3>Our Mission</h3>
+    <p>Deliver great everyday products at honest prices, and inspire small creators and brands.</p>
+  </article>
+  <article class="card">
+    <h3>Quality First</h3>
+    <p>Every item is evaluated for build quality, reliability and value. If we wouldn’t use it, we won’t sell it.</p>
+  </article>
+  <article class="card">
+    <h3>Customer Care</h3>
+    <p>Need help? Reach out at <a href="mailto:support@cambalaches.store">support@cambalaches.store</a>.</p>
+  </article>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Cambalaches. All rights reserved.</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
